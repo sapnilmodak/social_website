@@ -1,0 +1,61 @@
+services:
+  social_backend_app:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - social_backend_db
+    environment:
+      - DATABASE_URL=postgresql://user:password@social_backend_db:5432/canada_social_db?schema=public
+    networks:
+      - canada_social_network
+
+  social_backend_db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: canada_social_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - canada_social_network
+
+  social_frontend_app:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - canada_social_network
+
+  social_admin_frontend_app:
+    build: ./admin-frontend
+    ports:
+      - "5174:5173"
+    env_file:
+      - ./admin-frontend/.env
+    volumes:
+      - ./admin-frontend:/app
+      - /app/node_modules
+    networks:
+      - canada_social_network
+
+networks:
+  canada_social_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
