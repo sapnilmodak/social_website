@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Donation {
+  id                String   @id @default(uuid())
+  donorName         String?
+  donorEmail        String?
+  amount            Int      // Amount in paise
+  currency          String   @default("CAD")
+  stripeSessionId   String?  @unique
+  stripePaymentIntentId String?  @unique
+  status            String   @default("pending") // pending, completed, failed
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Subscriber {
+  id        String   @id @default(uuid())
+  firstName String
+  lastName  String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Analytics {
+  id           String   @id @default("site_stats")
+  visitorCount Int      @default(0)
+  updatedAt    DateTime @updatedAt
+}
+
+model CommunityPhoto {
+  id        String   @id @default(uuid())
+  url       String
+  caption   String?
+  createdAt DateTime @default(now())
+}
+
+model SEOConfig {
+  id          String   @id @default("main_config")
+  title       String?
+  description String?
+  keywords    String?
+  updatedAt   DateTime @updatedAt
+}
