@@ -1,6 +1,6 @@
 FROM node:20-alpine
 
-# Install build dependencies for Prisma if needed
+# Install build dependencies for Prisma
 RUN apk add --no-cache openssl
 
 WORKDIR /app
@@ -14,6 +14,10 @@ COPY . .
 # Generate Prisma Client
 RUN npx prisma generate
 
+# Make the start script executable
+RUN chmod +x start.sh
+
 EXPOSE 5000
 
-CMD ["npm", "run", "dev"]
+# Use the start script to run migrations before starting the app
+CMD ["./start.sh"]
