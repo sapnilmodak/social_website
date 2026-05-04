@@ -38,6 +38,11 @@ function Toast({ show, title, message, onClose }) {
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
+const DEFAULT_PHOTOS = [
+  { id: 'def1', url: '/social_work/image4.jpeg', caption: 'Jagdeep in the community' },
+  { id: 'def2', url: '/social_work/image3.jpeg', caption: 'Supporting Caledon' }
+];
+
 function Home() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -45,7 +50,7 @@ function Home() {
     email: ''
   });
   const [loading, setLoading] = useState(false);
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState(DEFAULT_PHOTOS);
   const [seo, setSeo] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [toast, setToast] = useState({ show: false, title: '', message: '' });
@@ -62,8 +67,17 @@ function Home() {
     // 2. Fetch Photos
     fetch(`${API_BASE}/admin/photos`)
       .then(res => res.json())
-      .then(data => setPhotos(data))
-      .catch(err => console.error("Photos fetch error:", err));
+      .then(data => {
+        if (data && data.length > 0) {
+          setPhotos(data);
+        } else {
+          setPhotos(DEFAULT_PHOTOS);
+        }
+      })
+      .catch(err => {
+        console.error("Photos fetch error:", err);
+        setPhotos(DEFAULT_PHOTOS);
+      });
 
     // 3. Fetch SEO
     fetch(`${API_BASE}/admin/seo`)
@@ -231,37 +245,28 @@ function Home() {
         </div>
 
         <div className="community-slider-container">
-          {photos.length > 0 ? (
-            <>
-              {photos.map((photo, index) => (
-                <div 
-                  key={photo.id} 
-                  className={`community-slide ${index === currentSlide ? 'active' : ''}`}
-                >
-                  <img src={`${BACKEND_URL}${photo.url}`} alt={photo.caption} />
-                  {photo.caption && (
-                    <div className="community-slide-caption">
-                      <h3>{photo.caption}</h3>
-                    </div>
-                  )}
+          {photos.map((photo, index) => (
+            <div 
+              key={photo.id} 
+              className={`community-slide ${index === currentSlide ? 'active' : ''}`}
+            >
+              <img src={photo.url.startsWith('/') ? photo.url : `${BACKEND_URL}${photo.url}`} alt={photo.caption} />
+              {photo.caption && (
+                <div className="community-slide-caption">
+                  <h3>{photo.caption}</h3>
                 </div>
+              )}
+            </div>
+          ))}
+          {photos.length > 1 && (
+            <div className="slider-controls">
+              {photos.map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                />
               ))}
-              <div className="slider-controls">
-                {photos.map((_, index) => (
-                  <div 
-                    key={index} 
-                    className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
-                    onClick={() => setCurrentSlide(index)}
-                  />
-                ))}
-              </div>
-            </>
-          ) : (
-            <div className="community-slide active">
-              <img src="/social_work/image3.png" alt="Community Placeholder" />
-              <div className="community-slide-caption">
-                <h3>Working with the community</h3>
-              </div>
             </div>
           )}
         </div>
