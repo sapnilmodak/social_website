@@ -19,5 +19,5 @@ RUN chmod +x start.sh
 
 EXPOSE 5000
 
-# Use the start script to run migrations before starting the app
-CMD ["./start.sh"]
+# Explicitly use 'sh' to run the script so Node doesn't try to execute it
+CMD ["sh", "./start.sh"]
