@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Donate from './pages/Donate';
+import About from './pages/About';
+import Platform from './pages/Platform';
+import Volunteer from './pages/Volunteer';
+import JoinModal from './components/JoinModal';
+import Toast from './components/Toast';
 import './App.css';
 
 function ScrollToTop() {
@@ -14,9 +19,30 @@ function ScrollToTop() {
 
 function Layout({ children }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [showJoinModal, setShowJoinModal] = useState(false);
+  const [toast, setToast] = useState({ show: false, title: '', message: '' });
+
+  const showNotification = (title, message) => {
+    setToast({ show: true, title, message });
+  };
 
   return (
     <div className="app-container">
+      <div className="toast-container">
+        <Toast 
+          show={toast.show} 
+          title={toast.title} 
+          message={toast.message} 
+          onClose={() => setToast({ ...toast, show: false })} 
+        />
+      </div>
+
+      <JoinModal 
+        isOpen={showJoinModal} 
+        onClose={() => setShowJoinModal(false)} 
+        showNotification={showNotification}
+      />
+
       <header className="header">
         <Link to="/" className="logo">JAGDEEP <span>SACHA</span></Link>
         
@@ -28,13 +54,20 @@ function Layout({ children }) {
 
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>HOME</Link>
-          <a href="/#about" className="nav-link" onClick={() => setMenuOpen(false)}>ABOUT</a>
-          <a href="/#vision" className="nav-link" onClick={() => setMenuOpen(false)}>VISION</a>
-          <a href="/#community" className="nav-link" onClick={() => setMenuOpen(false)}>COMMUNITY</a>
+          <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>ABOUT</Link>
+          <Link to="/platform" className="nav-link" onClick={() => setMenuOpen(false)}>PLATFORM</Link>
+          <Link to="/volunteer" className="nav-link" onClick={() => setMenuOpen(false)}>VOLUNTEER</Link>
+          <button 
+            className="nav-link mobile-only" 
+            onClick={() => { setShowJoinModal(true); setMenuOpen(false); }}
+            style={{ background: 'none', border: 'none', textAlign: 'left', padding: 0, cursor: 'pointer' }}
+          >
+            JOIN ME
+          </button>
         </nav>
 
         <div className="header-actions desktop-only">
-          {/* <Link to="/donate" className="btn btn-primary">DONATE NOW</Link> */}
+          <button className="btn btn-primary" onClick={() => setShowJoinModal(true)}>JOIN ME</button>
         </div>
       </header>
 
@@ -47,12 +80,14 @@ function Layout({ children }) {
             <h4>CONTACT</h4>
             <p>Official Campaign HQ</p>
             <p>Caledon, Ontario</p>
-            <p><a href="mailto:info@jagdeepsacha.ca" style={{ color: 'white', opacity: 0.8 }}>info@jagdeepsacha.ca</a></p>
+            <p><a href="mailto:connect@jagdeep4caledon.com" style={{ color: 'white', opacity: 0.8 }}>connect@jagdeep4caledon.com</a></p>
           </div>
           <div>
             <h4>RESOURCES</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">Meet Jagdeep</Link></li>
+              <li><Link to="/platform">Our Platform</Link></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
@@ -73,7 +108,8 @@ function Layout({ children }) {
             </form>
           </div>
         </div>
-        <p style={{ marginTop: '4rem', opacity: 0.6, fontSize: '0.8rem', textAlign: 'center' }}>Paid for by the Jagdeep Sacha Campaign for Caledon. &copy; 2026.</p>
+        <p style={{ marginTop: '2rem', textAlign: 'center', opacity: 0.8, fontWeight: 'bold' }}>A Caledon That Feels Like Home Again</p>
+        <p style={{ marginTop: '1rem', opacity: 0.6, fontSize: '0.8rem', textAlign: 'center' }}>Paid for by the Jagdeep Sacha Campaign for Caledon. &copy; 2026.</p>
       </footer>
     </div>
   );
@@ -86,6 +122,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/platform" element={<Platform />} />
+          <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/donate" element={<Donate />} />
         </Routes>
       </Layout>
@@ -93,4 +132,6 @@ function App() {
   );
 }
 
+
 export default App;
+

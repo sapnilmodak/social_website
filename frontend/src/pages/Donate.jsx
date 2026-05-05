@@ -134,9 +134,9 @@ function Donate() {
           <div className="donate-container">
             <div className="donate-info">
               <span className="section-subtitle">INVEST IN OUR FUTURE</span>
-              <h1 className="section-title">YOUR SUPPORT<br />DRIVES REAL CHANGE</h1>
+              <h1 className="section-title">Fuel a Campaign That Has No Corporate Backers — Only Neighbours</h1>
               <p className="donate-text">
-                Every dollar you contribute goes directly towards building a better Caledon. Your donation empowers Jagdeep to fight for the community we all deserve.
+                I have helped hundreds of families manage their finances honestly. I will manage yours the same way — as Mayor.
               </p>
               <div className="impact-box">
                 <h4>WHERE YOUR MONEY GOES</h4>
