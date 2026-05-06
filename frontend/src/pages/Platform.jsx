@@ -15,7 +15,7 @@ function Platform() {
     {
       id: 2,
       title: "Road Safety For Everyone",
-      description: "Roads that are safe. Streets that are ours. We will tackle the issue of illegal trucking and improve infrastructure to prevent more tragedies on our roads.",
+      description: "Roads that are safe. Streets that are ours. We will tackle the issue of illegal trucking and improve public safety measures to prevent more tragedies on our roads.",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -35,7 +35,7 @@ function Platform() {
     {
       id: 4,
       title: "Balanced Development",
-      description: "Protect what we love. Build what we need. We will prioritize community infrastructure — parks, schools, and local services — over backroom deals.",
+      description: "Protect what we love. Build what we need. We will prioritize community facilities — parks, schools, and local services — over backroom deals.",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />

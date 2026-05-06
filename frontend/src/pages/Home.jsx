@@ -111,7 +111,7 @@ function Home() {
         <div className="about-info">
           <h2>MEET JAGDEEP</h2>
           <p>Jagdeep Sacha is a dedicated community leader with deep roots in Caledon. He believes in a community where everyone has a voice and where growth is balanced with the preservation of our unique heritage.</p>
-          <p>From local volunteering to advocacy for better infrastructure, Jagdeep has always put Caledon first. He is committed to transparency, fiscal responsibility, and building a future we can all be proud of.</p>
+          <p>From local volunteering to advocacy for better public services, Jagdeep has always put Caledon first. He is committed to transparency, fiscal responsibility, and building a future we can all be proud of.</p>
           <a href="#involved" className="btn btn-outline">GET INVOLVED</a>
         </div>
       </section>
@@ -124,9 +124,9 @@ function Home() {
         
         <div className="platform-accordion">
           <PlatformItem 
-            title="INFRASTRUCTURE" 
-            content="We will prioritize the modernization of Caledon's infrastructure, ensuring our roads are safe and our public transit is accessible, all while maintaining the unique rural charm that defines our community."
-            id="infra"
+            title="ROAD SAFETY & SERVICES" 
+            content="We will prioritize the modernization of Caledon's local services, ensuring our roads are safe and our community remains well-connected, all while maintaining the unique rural charm that defines our community."
+            id="services"
           />
           <PlatformItem 
             title="LOCAL ECONOMY" 
