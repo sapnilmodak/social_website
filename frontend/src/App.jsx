@@ -17,9 +17,11 @@ function ScrollToTop() {
   return null;
 }
 
+import { ModalProvider, useModal } from './ModalContext';
+
 function Layout({ children }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const [showJoinModal, setShowJoinModal] = useState(false);
+  const { showJoinModal, openJoinModal, closeJoinModal } = useModal();
   const [toast, setToast] = useState({ show: false, title: '', message: '' });
 
   const showNotification = (title, message) => {
@@ -39,7 +41,7 @@ function Layout({ children }) {
 
       <JoinModal 
         isOpen={showJoinModal} 
-        onClose={() => setShowJoinModal(false)} 
+        onClose={closeJoinModal} 
         showNotification={showNotification}
       />
 
@@ -56,10 +58,16 @@ function Layout({ children }) {
           <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>HOME</Link>
           <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>ABOUT</Link>
           <Link to="/platform" className="nav-link" onClick={() => setMenuOpen(false)}>PLATFORM</Link>
-          <Link to="/volunteer" className="nav-link" onClick={() => setMenuOpen(false)}>VOLUNTEER</Link>
+          <button 
+            className="nav-link" 
+            onClick={() => { openJoinModal(); setMenuOpen(false); }}
+            style={{ background: 'none', border: 'none', textAlign: 'left', padding: 0, cursor: 'pointer' }}
+          >
+            VOLUNTEER
+          </button>
           <button 
             className="nav-link mobile-only" 
-            onClick={() => { setShowJoinModal(true); setMenuOpen(false); }}
+            onClick={() => { openJoinModal(); setMenuOpen(false); }}
             style={{ background: 'none', border: 'none', textAlign: 'left', padding: 0, cursor: 'pointer' }}
           >
             JOIN ME
@@ -67,7 +75,7 @@ function Layout({ children }) {
         </nav>
 
         <div className="header-actions desktop-only">
-          <button className="btn btn-primary" onClick={() => setShowJoinModal(true)}>JOIN ME</button>
+          <button className="btn btn-primary" onClick={openJoinModal}>JOIN ME</button>
         </div>
       </header>
 
@@ -117,18 +125,20 @@ function Layout({ children }) {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/platform" element={<Platform />} />
-          <Route path="/volunteer" element={<Volunteer />} />
-          <Route path="/donate" element={<Donate />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <ModalProvider>
+      <Router>
+        <ScrollToTop />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/platform" element={<Platform />} />
+            <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/donate" element={<Donate />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </ModalProvider>
   );
 }
 

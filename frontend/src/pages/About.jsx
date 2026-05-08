@@ -1,6 +1,8 @@
 import React from 'react';
+import { useModal } from '../ModalContext';
 
 function About() {
+  const { openJoinModal } = useModal();
   return (
     <main className="about-page">
       {/* Hero Section */}
@@ -87,7 +89,13 @@ function About() {
             I am here for your trust.
           </div>
           <div className="flex-center" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
-            <a href="/volunteer" className="btn btn-primary" style={{ background: 'var(--primary-red)' }}>Join the Campaign</a>
+            <button 
+              className="btn btn-primary" 
+              style={{ background: 'var(--primary-red)' }}
+              onClick={openJoinModal}
+            >
+              Join the Campaign
+            </button>
             <a href="/platform" className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>Read the Platform</a>
           </div>
         </div>

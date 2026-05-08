@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useModal } from '../ModalContext';
 
 function PlatformItem({ title, content, id }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,7 @@ const DEFAULT_PHOTOS = [
 ];
 
 function Home() {
+  const { openJoinModal } = useModal();
   const [photos, setPhotos] = useState(DEFAULT_PHOTOS);
   const [seo, setSeo] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,25 +83,25 @@ function Home() {
       <main>
       <section className="hero">
         <div className="hero-content">
-          <span className="hero-subtitle" style={{ color: '#D4AF37', fontSize: '0.9rem', letterSpacing: '2px' }}>CALEDON MUNICIPAL ELECTION · OCTOBER 26, 2026</span>
+          <span className="hero-subtitle">CALEDON MUNICIPAL ELECTION · OCTOBER 26, 2026</span>
           <h1 className="hero-title">Caledon<br />That<br />Feels Like<br />Home<br />Again</h1>
-          <p style={{ fontSize: '1.2rem', color: 'var(--primary-navy)', opacity: 0.9, maxWidth: '600px', marginBottom: '1.5rem' }}>
+          <p className="hero-description">
             For 20 years I have helped hundreds of Caledon families find their home. Now I want to protect it — for all of us.
           </p>
-          <p style={{ color: '#D4AF37', fontWeight: '700', marginBottom: '2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-            Jagdeep Sacha · Certified Mortgage Broker · Realtor · Father · Your Neighbour
+          <p className="hero-tagline">
+            Jagdeep Sacha · Son of a Farmer · Devoted Father · Your Trusted Neighbour
           </p>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <Link to="/about" className="btn" style={{ background: '#D4AF37', color: 'white' }}>MEET JAGDEEP</Link>
+          <div className="hero-actions">
+            <Link to="/about" className="btn btn-gold">MEET JAGDEEP</Link>
             <Link to="/platform" className="btn btn-outline">SEE OUR PLATFORM</Link>
           </div>
         </div>
-        <div className="hero-image-wrap" style={{ background: '#7a828a', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
+        <div className="hero-image-wrap" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
           <img 
-            src="/js_home.jpeg" 
+            src="/jsgreen.jpeg" 
             alt="Jagdeep Sacha" 
             className="hero-image" 
-            style={{ width: 'auto', height: '100%', objectFit: 'contain', mixBlendMode: 'multiply', filter: 'contrast(1.1) brightness(1.1)' }} 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} 
           />
         </div>
       </section>
@@ -184,7 +186,13 @@ function Home() {
         <h2 style={{ fontSize: '4rem' }}>BE PART OF THE CHANGE</h2>
         <p style={{ fontSize: '1.5rem', margin: 'var(--space-md) auto', maxWidth: '700px' }}>Whether you can volunteer your time, host a lawn sign, or make a donation, your support makes a difference.</p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--space-sm)', marginTop: 'var(--space-md)' }}>
-          <a href="#involved" className="btn" style={{ background: 'white', color: 'var(--primary-red)' }}>VOLUNTEER</a>
+          <button 
+            className="btn" 
+            style={{ background: 'white', color: 'var(--primary-red)' }}
+            onClick={openJoinModal}
+          >
+            VOLUNTEER
+          </button>
           <button className="btn" style={{ background: '#ccc', color: 'white', cursor: 'not-allowed' }} disabled>DONATE NOW</button>
         </div>
       </section>

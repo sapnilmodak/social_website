@@ -146,6 +146,17 @@ h1, h2, h3, h4 {
   color: white;
 }
 
+.btn-gold {
+  background: #D4AF37;
+  color: white;
+}
+
+.btn-gold:hover {
+  background: #b8962d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
 /* Menu Toggle */
 .menu-toggle {
   display: none;
@@ -209,17 +220,43 @@ h1, h2, h3, h4 {
 }
 
 .hero-subtitle {
-  color: var(--primary-red);
+  color: #D4AF37;
   font-weight: 700;
   margin-bottom: var(--space-sm);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero-title {
-  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
   color: var(--primary-red);
   margin-bottom: var(--space-md);
-  line-height: 0.9;
+  line-height: 0.85;
+  font-weight: 900;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--primary-navy);
+  opacity: 0.9;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.hero-tagline {
+  color: #D4AF37;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .hero-image-wrap {
@@ -784,10 +821,40 @@ h1, h2, h3, h4 {
   .mobile-only { display: block; margin-top: 2rem; }
   .desktop-only { display: none; }
 
-  .hero { grid-template-columns: 1fr; }
-  .hero-content { padding: var(--space-xl) var(--space-md); }
-  .hero-title { font-size: 5rem; }
-  .hero-image-wrap { height: 400px; }
+  .hero { 
+    grid-template-columns: 1fr; 
+    min-height: auto;
+  }
+  .hero-content { 
+    padding: var(--space-xl) var(--space-md) var(--space-md); 
+    text-align: center;
+    align-items: center;
+  }
+  .hero-title { 
+    font-size: 3.5rem; 
+    margin-bottom: 1.5rem;
+  }
+  .hero-image-wrap { 
+    height: 50vh; 
+    order: -1;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .hero-tagline {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
   
   .about { grid-template-columns: 1fr; }
   .about-info h2 { font-size: 3rem; }

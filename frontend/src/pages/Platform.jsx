@@ -1,6 +1,8 @@
 import React from 'react';
+import { useModal } from '../ModalContext';
 
 function Platform() {
+  const { openJoinModal } = useModal();
   const commitments = [
     {
       id: 1,
@@ -111,7 +113,7 @@ function Platform() {
                 If elected, my office will be one of transparency. You won't have to guess where I stand 
                 on development, on the environment, or on the safety of our children.
               </p>
-              <a href="/volunteer" className="btn btn-primary">Support this Vision</a>
+              <button className="btn btn-primary" onClick={openJoinModal}>Support this Vision</button>
             </div>
             <div className="content-image" style={{ borderRadius: '20px', overflow: 'hidden' }}>
               <img src="/js_home_3.png" alt="Community Vision" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

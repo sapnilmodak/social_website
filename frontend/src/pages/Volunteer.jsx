@@ -1,6 +1,8 @@
 import React from 'react';
+import { useModal } from '../ModalContext';
 
 function Volunteer() {
+  const { openJoinModal } = useModal();
   return (
     <main className="volunteer-page">
       <section className="hero-internal" style={{ background: 'var(--primary-navy)', color: 'white' }}>
@@ -53,7 +55,11 @@ function Volunteer() {
           </div>
           
           <div className="text-center" style={{ marginTop: '4rem' }}>
-            <button className="btn btn-primary" style={{ padding: '1.2rem 3.5rem', fontSize: '1.1rem', background: 'var(--primary-red)' }}>
+            <button 
+              className="btn btn-primary" 
+              style={{ padding: '1.2rem 3.5rem', fontSize: '1.1rem', background: 'var(--primary-red)' }}
+              onClick={openJoinModal}
+            >
               Sign Me Up to Volunteer
             </button>
           </div>
