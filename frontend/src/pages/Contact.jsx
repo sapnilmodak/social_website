@@ -74,9 +74,9 @@ function Contact() {
               <div>
                 <h4 style={{ color: 'var(--primary-green)', marginBottom: '0.5rem' }}>FOLLOW THE CAMPAIGN</h4>
                 <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
-                  <a href="https://www.facebook.com/profile.php?id=61588854293674" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-navy)', fontSize: '1.2rem', textDecoration: 'none' }}>Facebook</a>
-                  <a href="https://www.instagram.com/jagdeep_sacha?igsh=ZDQ5bmM3ZG03ZDRw" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-navy)', fontSize: '1.2rem', textDecoration: 'none' }}>Instagram</a>
-                  <a href="https://x.com/jagdeep_sacha" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-navy)', fontSize: '1.2rem', textDecoration: 'none' }}>Twitter / X</a>
+                  <a href="https://www.facebook.com/profile.php?id=61589547351453" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-navy)', fontSize: '1.2rem', textDecoration: 'none' }}>Facebook</a>
+                  <a href="https://www.instagram.com/jagdeep4caledon/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-navy)', fontSize: '1.2rem', textDecoration: 'none' }}>Instagram</a>
+                  <a href="https://x.com/jagdeep4caledon" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-navy)', fontSize: '1.2rem', textDecoration: 'none' }}>Twitter / X</a>
                 </div>
               </div>
             </div>

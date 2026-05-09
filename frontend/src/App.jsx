@@ -107,9 +107,9 @@ function Layout({ children }) {
           <div className="footer-social-links">
             <h4>STAY CONNECTED</h4>
             <ul>
-              <li><a href="https://www.facebook.com/profile.php?id=61588854293674" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-              <li><a href="https://www.instagram.com/jagdeep_sacha?igsh=ZDQ5bmM3ZG03ZDRw" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://x.com/jagdeep_sacha" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61589547351453" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/jagdeep4caledon/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://x.com/jagdeep4caledon" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
               <li><a href="https://www.youtube.com/@JagdeepSacha" target="_blank" rel="noopener noreferrer">YouTube</a></li>
             </ul>
           </div>
