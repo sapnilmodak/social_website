@@ -86,7 +86,7 @@ function Home() {
           <span className="hero-subtitle" style={{ color: 'var(--accent-gold)' }}>FOR MAYOR OF CALEDON</span>
           <h1 className="hero-title" style={{ color: 'white' }}>Jagdeep Sacha<br />for Mayor</h1>
           <p className="hero-tagline" style={{ color: 'var(--accent-gold)', fontSize: '1.2rem' }}>
-            Fresh Eyes. Honest Leadership. Protecting Our Rural Roots.
+            Son of a Farmer · Fresh Eyes. Honest Leadership. Protecting Our Rural Roots.
           </p>
           <p className="hero-description" style={{ color: 'white', maxWidth: '700px' }}>
             Caledon deserves better than the same old insiders. I’m running for Mayor because it’s time for 
