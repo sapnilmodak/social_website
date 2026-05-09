@@ -83,8 +83,8 @@ function Home() {
       <main>
       <section className="hero">
         <div className="hero-content">
-          <span className="hero-subtitle">Caledon My home, the most beautiful place in Ontario.</span>
-          <h1 className="hero-title">Caledon<br />That<br />Feels Like<br />Home<br />Again</h1>
+          <span className="hero-subtitle">CALEDON MUNICIPAL ELECTION · OCTOBER 26, 2026</span>
+          <h1 className="hero-title">Caledon My home,<br />the most beautiful<br />place in Ontario</h1>
           <p className="hero-description">
             For yrs I have helped people find their home. Now I want to protect it — for all of us.
           </p>
@@ -134,9 +134,9 @@ function Home() {
             id="services"
           />
           <PlatformItem 
-            title="LOCAL ECONOMY" 
-            content="Supporting our small business owners is at the heart of our economic plan. We will create incentives for local entrepreneurship and ensure that our community remains a land of opportunity for everyone."
-            id="economy"
+            title="SAFEGUARDING FARMLAND, WATER & ENVIRONMENT" 
+            content="Our natural resources are precious. We are committed to protecting prime agricultural land, securing our water sources, and preserving the environmental integrity of our region for future generations."
+            id="environment-safeguard"
           />
           <PlatformItem 
             title="COMMUNITY SAFETY" 

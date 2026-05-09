@@ -88,8 +88,6 @@ function Layout({ children }) {
         <div className="footer-grid">
           <div>
             <h4>CONTACT</h4>
-            <p>Official Campaign HQ</p>
-            <p>Caledon, Ontario</p>
             <p><a href="mailto:connect@jagdeep4caledon.com" style={{ color: 'white', opacity: 0.8 }}>connect@jagdeep4caledon.com</a></p>
           </div>
           <div>
