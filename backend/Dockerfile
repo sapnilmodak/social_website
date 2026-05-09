@@ -14,8 +14,8 @@ COPY . .
 # Generate Prisma Client
 RUN npx prisma generate
 
-# Make the start script executable
-RUN chmod +x start.sh
+# Make the start script executable and fix line endings
+RUN sed -i 's/\r$//' start.sh && chmod +x start.sh
 
 EXPOSE 5000
 

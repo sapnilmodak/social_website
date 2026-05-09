@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
-import { LayoutDashboard, Users, CreditCard, Camera, Search } from 'lucide-react';
+import { LayoutDashboard, Users, CreditCard, Camera, Search, PenTool } from 'lucide-react';
 
 import Dashboard from './pages/Dashboard';
 import Subscribers from './pages/Subscribers';
 import Donations from './pages/Donations';
 import CommunityPhotos from './pages/CommunityPhotos';
 import SEOManager from './pages/SEOManager';
+import BlogManager from './pages/BlogManager';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
             <NavLink to="/seo" className="nav-link">
               <Search size={20} /> SEO Management
             </NavLink>
+            <NavLink to="/blogs" className="nav-link">
+              <PenTool size={20} /> Blogs
+            </NavLink>
           </nav>
         </aside>
 
@@ -40,6 +44,7 @@ function App() {
             <Route path="/donations" element={<Donations />} />
             <Route path="/photos" element={<CommunityPhotos />} />
             <Route path="/seo" element={<SEOManager />} />
+            <Route path="/blogs" element={<BlogManager />} />
           </Routes>
         </main>
       </div>

@@ -83,14 +83,12 @@ function Home() {
       <main>
       <section className="hero">
         <div className="hero-content">
-          <span className="hero-subtitle">CALEDON MUNICIPAL ELECTION · OCTOBER 26, 2026</span>
+          <span className="hero-subtitle">Caledon My home, the most beautiful place in Ontario.</span>
           <h1 className="hero-title">Caledon<br />That<br />Feels Like<br />Home<br />Again</h1>
           <p className="hero-description">
-            For 20 years I have helped hundreds of Caledon families find their home. Now I want to protect it — for all of us.
+            For yrs I have helped people find their home. Now I want to protect it — for all of us.
           </p>
-          <p className="hero-tagline">
-            Jagdeep Sacha · Son of a Farmer · Devoted Father · Your Trusted Neighbour
-          </p>
+          <p className="hero-tagline">Jagdeep Sacha · Son of a Farmer · Devoted Father · Your Trusted Neighbour</p>
           <div className="hero-actions">
             <Link to="/about" className="btn btn-gold">MEET JAGDEEP</Link>
             <Link to="/platform" className="btn btn-outline">SEE OUR PLATFORM</Link>
@@ -112,8 +110,8 @@ function Home() {
         </div>
         <div className="about-info">
           <h2>MEET JAGDEEP</h2>
-          <p>Jagdeep Sacha is a dedicated community leader with deep roots in Caledon. He believes in a community where everyone has a voice and where growth is balanced with the preservation of our unique heritage.</p>
-          <p>From local volunteering to advocacy for better public services, Jagdeep has always put Caledon first. He is committed to transparency, fiscal responsibility, and building a future we can all be proud of.</p>
+          <p>Jagdeep Sacha is a dedicated community leader with deep roots in the community. He believes in a community where everyone has a voice and where growth is balanced with the preservation of our unique heritage.</p>
+          <p>From local volunteering to advocacy for better public services, Jagdeep has always put the community first. He is committed to transparency, fiscal responsibility, and building a future we can all be proud of.</p>
           <a href="#involved" className="btn btn-outline">GET INVOLVED</a>
         </div>
       </section>
@@ -126,19 +124,19 @@ function Home() {
         
         <div className="platform-accordion">
           <PlatformItem 
+            title="GREEN CALEDON & RURAL BEAUTY" 
+            content="Our green spaces are our greatest legacy. Jagdeep is committed to protecting the greenbelt, promoting sustainable development practices, and investing in renewable energy for a cleaner future."
+            id="environment"
+          />
+          <PlatformItem 
             title="ROAD SAFETY & SERVICES" 
-            content="We will prioritize the modernization of Caledon's local services, ensuring our roads are safe and our community remains well-connected, all while maintaining the unique rural charm that defines our community."
+            content="We will prioritize the modernization of local services, ensuring our roads are safe and our community remains well-connected, all while maintaining the unique rural charm that defines our community."
             id="services"
           />
           <PlatformItem 
             title="LOCAL ECONOMY" 
-            content="Supporting our small business owners is at the heart of our economic plan. We will create incentives for local entrepreneurship and ensure that Caledon remains a land of opportunity for everyone."
+            content="Supporting our small business owners is at the heart of our economic plan. We will create incentives for local entrepreneurship and ensure that our community remains a land of opportunity for everyone."
             id="economy"
-          />
-          <PlatformItem 
-            title="SUSTAINABILITY" 
-            content="Our green spaces are our greatest legacy. Jagdeep is committed to protecting the greenbelt, promoting sustainable development practices, and investing in renewable energy for a cleaner future."
-            id="environment"
           />
           <PlatformItem 
             title="COMMUNITY SAFETY" 
@@ -151,7 +149,7 @@ function Home() {
       <section className="section community" id="community" style={{ background: 'var(--bg-offwhite)' }}>
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
           <h2 style={{ fontSize: '3.5rem', color: 'var(--primary-navy)' }}>COMMUNITY IN ACTION</h2>
-          <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '700px', margin: '0 auto' }}>See how Jagdeep has been working for you across Caledon.</p>
+          <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '700px', margin: '0 auto' }}>See how Jagdeep has been working for you across the community.</p>
         </div>
 
         <div className="community-slider-container">

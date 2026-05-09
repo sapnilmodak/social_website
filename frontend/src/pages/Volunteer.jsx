@@ -11,7 +11,7 @@ function Volunteer() {
             This Campaign Lives in Your Streets
           </h1>
           <p style={{ fontSize: '1.25rem', opacity: 0.9, maxWidth: '800px', margin: '0 auto' }}>
-            I started at Best Buy. I went door to door at RBC. I knocked on Caledon doors as a realtor. 
+            I started at Best Buy. I went door to door at RBC. I knocked on doors as a realtor. 
             Now I need you to knock with me.
           </p>
         </div>
@@ -73,11 +73,11 @@ function Volunteer() {
               <h2>Why Your Help Matters</h2>
               <p>
                 This campaign isn't funded by big corporations or special interest groups. It is powered by 
-                people like you who want a better Caledon for their families and their future.
+                people like you who want a better community for their families and their future.
               </p>
               <p>
                 Every door knocked, every sign placed, and every hour volunteered brings us closer to a 
-                community-led victory. Together, we can ensure Caledon stays Caledon.
+                community-led victory. Together, we can ensure our community stays strong.
               </p>
             </div>
             <div className="content-image" style={{ borderRadius: '20px', overflow: 'hidden' }}>
