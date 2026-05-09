@@ -143,6 +143,11 @@ function Home() {
             content="Safety is the foundation of a thriving community. We will work closely with local services to enhance emergency response times and build programs that keep our neighborhoods safe and inclusive."
             id="safety"
           />
+          <PlatformItem 
+            title="TRANSPARENCY & ACCOUNTABILITY" 
+            content="A city belongs to its people. Jagdeep will ensure that community decisions are made in the open, with real public consultation. We will prioritize transparency in municipal spending and ensure every voice in Caledon is heard before major projects move forward."
+            id="transparency"
+          />
         </div>
       </section>
 

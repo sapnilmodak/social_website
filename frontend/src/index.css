@@ -550,7 +550,7 @@ h1, h2, h3, h4 {
 }
 
 .community-slide.active { opacity: 1; z-index: 10; }
-.community-slide img { width: 100%; height: 100%; object-fit: cover; }
+.community-slide img { width: 100%; height: 100%; object-fit: contain; background: #000; }
 
 .community-slide-caption {
   position: absolute;
