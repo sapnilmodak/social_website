@@ -9,6 +9,7 @@ import donationRoutes from './routes/donation.routes';
 import subscriberRoutes from './routes/subscriber.routes';
 import adminRoutes from './routes/admin.routes';
 import blogRoutes from './routes/blog.routes';
+import contactRoutes from './routes/contact.routes';
 
 dotenv.config();
 
@@ -32,6 +33,8 @@ app.use('/api/subscriber', subscriberRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/admin/blog', blogRoutes);
+app.use('/api/contact', contactRoutes);
+app.use('/api/admin/contact', contactRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is running' });
 });

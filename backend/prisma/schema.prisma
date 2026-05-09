@@ -59,3 +59,12 @@ model Blog {
   updatedAt   DateTime @updatedAt
 }
 
+model ContactMessage {
+  id        String   @id @default(uuid())
+  firstName String
+  lastName  String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+}
+
