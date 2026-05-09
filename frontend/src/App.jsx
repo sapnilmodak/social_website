@@ -7,6 +7,7 @@ import Vision from './pages/Vision';
 import Platform from './pages/Platform';
 import Volunteer from './pages/Volunteer';
 import Contact from './pages/Contact';
+import Blogs from './pages/Blogs';
 import JoinModal from './components/JoinModal';
 import Toast from './components/Toast';
 import './App.css';
@@ -62,6 +63,7 @@ function Layout({ children }) {
           <Link to="/vision" className="nav-link" onClick={() => setMenuOpen(false)}>MY VISION</Link>
           <Link to="/platform" className="nav-link" onClick={() => setMenuOpen(false)}>ISSUES</Link>
           <Link to="/volunteer" className="nav-link" onClick={() => setMenuOpen(false)}>GET INVOLVED</Link>
+          <Link to="/blogs" className="nav-link" onClick={() => setMenuOpen(false)}>BLOGS</Link>
           <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>CONTACT</Link>
           <button 
             className="nav-link" 
@@ -138,6 +140,7 @@ function App() {
             <Route path="/vision" element={<Vision />} />
             <Route path="/platform" element={<Platform />} />
             <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/blogs" element={<Blogs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
           </Routes>

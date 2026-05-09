@@ -22,11 +22,9 @@ function Blogs() {
 
   return (
     <main className="blogs-page">
-      <section className="hero-internal" style={{ background: 'var(--primary-navy)', color: 'white' }}>
+      <section className="hero-internal" style={{ background: 'var(--primary-green)', color: 'white' }}>
         <div className="hero-content">
-          <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'white' }}>
-            Latest from the Campaign
-          </h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>Latest from the Campaign</h1>
           <p style={{ fontSize: '1.25rem', opacity: 0.9, maxWidth: '800px', margin: '0 auto' }}>
             Stay updated with our progress, community events, and vision for Caledon.
           </p>
