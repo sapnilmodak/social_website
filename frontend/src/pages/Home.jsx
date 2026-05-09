@@ -174,6 +174,11 @@ function Home() {
             content="Better programs and services for our aging population. Every senior in Caledon deserves to age with dignity."
             id="seniors"
           />
+          <PlatformItem 
+            title="TRANSPARENCY & ACCOUNTABILITY" 
+            content="A city belongs to its people. Jagdeep will ensure that community decisions are made in the open, with real public consultation. We will prioritize transparency in municipal spending and ensure every voice in Caledon is heard before major projects move forward."
+            id="transparency"
+          />
         </div>
         <div style={{ textAlign: 'center', marginTop: '3rem' }}>
           <Link to="/platform" className="btn btn-outline">VIEW ALL ISSUES</Link>
@@ -192,7 +197,7 @@ function Home() {
               key={photo.id} 
               className={`community-slide ${index === currentSlide ? 'active' : ''}`}
             >
-              <img src={photo.url.startsWith('/') ? photo.url : `${BACKEND_URL}${photo.url}`} alt={photo.caption} />
+              <img src={photo.url.startsWith('/uploads') ? `${BACKEND_URL}${photo.url}` : photo.url} alt={photo.caption} />
               {photo.caption && (
                 <div className="community-slide-caption">
                   <h3>{photo.caption}</h3>
