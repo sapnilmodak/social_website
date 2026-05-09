@@ -81,68 +81,102 @@ function Home() {
   return (
     <>
       <main>
-      <section className="hero">
+      <section className="hero" style={{ background: 'linear-gradient(rgba(10, 25, 10, 0.7), rgba(10, 25, 10, 0.8)), url("/jsgreen.jpeg") center/cover' }}>
         <div className="hero-content">
-          <span className="hero-subtitle">CALEDON MUNICIPAL ELECTION · OCTOBER 26, 2026</span>
-          <h1 className="hero-title">Caledon My home,<br />the most beautiful<br />place in Ontario</h1>
-          <p className="hero-description">
-            For yrs I have helped people find their home. Now I want to protect it — for all of us.
+          <span className="hero-subtitle" style={{ color: 'var(--accent-gold)' }}>FOR MAYOR OF CALEDON</span>
+          <h1 className="hero-title" style={{ color: 'white' }}>Jagdeep Sacha<br />for Mayor</h1>
+          <p className="hero-tagline" style={{ color: 'var(--accent-gold)', fontSize: '1.2rem' }}>
+            Fresh Eyes. Honest Leadership. Protecting Our Rural Roots.
           </p>
-          <p className="hero-tagline">Jagdeep Sacha · Son of a Farmer · Devoted Father · Your Trusted Neighbour</p>
+          <p className="hero-description" style={{ color: 'white', maxWidth: '700px' }}>
+            Caledon deserves better than the same old insiders. I’m running for Mayor because it’s time for 
+            real transparency, controlled growth that respects our farmland, safer roads, and putting 
+            residents first — not developers.
+          </p>
           <div className="hero-actions">
-            <Link to="/about" className="btn btn-gold">MEET JAGDEEP</Link>
-            <Link to="/platform" className="btn btn-outline">SEE OUR PLATFORM</Link>
+            <button className="btn btn-gold" onClick={openJoinModal}>DONATE NOW</button>
+            <button className="btn btn-outline" onClick={openJoinModal} style={{ borderColor: 'white', color: 'white' }}>VOLUNTEER</button>
           </div>
         </div>
-        <div className="hero-image-wrap" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
-          <img 
-            src="/jsgreen.jpeg" 
-            alt="Jagdeep Sacha" 
-            className="hero-image" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} 
-          />
+      </section>
+
+      <section className="section bg-light" id="why-running">
+        <div className="container">
+          <div className="content-block">
+            <div className="content-text">
+              <span className="section-subtitle">Why I Am Running</span>
+              <h2>Caledon Deserves Better</h2>
+              <p>
+                For too long, decisions have been made by the same insiders who have failed to control 
+                runaway development, protect our farmland, and keep taxes affordable for hardworking families.
+              </p>
+              <p>
+                I am running for Mayor because it’s time for fresh eyes and honest leadership. 
+                I will protect our rural character, demand fiscal responsibility, and put the needs of 
+                Caledon residents ahead of developers and special interests.
+              </p>
+              <p style={{ fontWeight: 'bold' }}>
+                Our town is at a crossroads — we can either continue down the same path or choose real change. 
+                I am running to give you that choice.
+              </p>
+            </div>
+            <div className="content-image">
+              <img src="/js_home_1.jpeg" alt="Jagdeep Sacha" style={{ borderRadius: '12px', width: '100%' }} />
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section about" id="about">
         <div className="about-image">
-          <img src="/js_home_1.jpeg" alt="Jagdeep helping the community" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+          <img src="/js_home_1.jpeg" alt="Jagdeep Sacha for Mayor" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
         </div>
         <div className="about-info">
-          <h2>MEET JAGDEEP</h2>
-          <p>Jagdeep Sacha is a dedicated community leader with deep roots in the community. He believes in a community where everyone has a voice and where growth is balanced with the preservation of our unique heritage.</p>
-          <p>From local volunteering to advocacy for better public services, Jagdeep has always put the community first. He is committed to transparency, fiscal responsibility, and building a future we can all be proud of.</p>
-          <a href="#involved" className="btn btn-outline">GET INVOLVED</a>
+          <span className="section-subtitle">A Candidate with Heart</span>
+          <h2>MEET JAGDEEP SACHA</h2>
+          <p>
+            Born and raised with deep roots in the Caledon community, Jagdeep Sacha has spent years 
+            listening to residents and working to make our community better. As a local real estate 
+            professional and dedicated community volunteer, he understands the unique challenges we face.
+          </p>
+          <p>
+            Now, he is bringing his passion and fresh perspective to lead Caledon as your Mayor. 
+            Jagdeep is committed to transparency, fiscal responsibility, and building a future we can all be proud of.
+          </p>
+          <Link to="/about" className="btn btn-primary">LEARN MORE ABOUT JAGDEEP</Link>
         </div>
       </section>
 
-      <section className="section platform" id="vision">
+      <section className="section platform" id="issues">
         <div className="section-header">
-          <span className="section-subtitle">OUR PLATFORM</span>
-          <h2 className="section-title">THE VISION FOR CALEDON</h2>
+          <span className="section-subtitle">The Plan for Caledon</span>
+          <h2 className="section-title">KEY ISSUES</h2>
         </div>
         
         <div className="platform-accordion">
           <PlatformItem 
-            title="GREEN CALEDON & RURAL BEAUTY" 
-            content="Our green spaces are our greatest legacy. Jagdeep is committed to protecting the greenbelt, promoting sustainable development practices, and investing in renewable energy for a cleaner future."
-            id="environment"
+            title="PROTECTING RURAL CALEDON" 
+            content="Stop uncontrolled development. Preserve our farms and green spaces. We must preserve our rural character for future generations."
+            id="rural"
           />
           <PlatformItem 
-            title="ROAD SAFETY & SERVICES" 
-            content="We will prioritize the modernization of local services, ensuring our roads are safe and our community remains well-connected, all while maintaining the unique rural charm that defines our community."
-            id="services"
+            title="LOWER TAXES & FISCAL RESPONSIBILITY" 
+            content="Fight against tax increases. Make sure growth actually pays for itself instead of burdening existing residents."
+            id="taxes"
           />
           <PlatformItem 
-            title="SAFEGUARDING FARMLAND, WATER & ENVIRONMENT" 
-            content="Our natural resources are precious. We are committed to protecting prime agricultural land, securing our water sources, and preserving the environmental integrity of our region for future generations."
-            id="environment-safeguard"
+            title="SAFER ROADS" 
+            content="Fix dangerous intersections and make our streets safe for children. We need better infrastructure that works for residents."
+            id="roads"
           />
           <PlatformItem 
-            title="COMMUNITY SAFETY" 
-            content="Safety is the foundation of a thriving community. We will work closely with local services to enhance emergency response times and build programs that keep our neighborhoods safe and inclusive."
-            id="safety"
+            title="SUPPORTING SENIORS" 
+            content="Better programs and services for our aging population. Every senior in Caledon deserves to age with dignity."
+            id="seniors"
           />
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <Link to="/platform" className="btn btn-outline">VIEW ALL ISSUES</Link>
         </div>
       </section>
 
@@ -180,18 +214,24 @@ function Home() {
         </div>
       </section>
 
-      <section className="section involved" id="involved" style={{ textAlign: 'center', background: 'var(--primary-red)', color: 'white' }}>
+      <section className="section involved" id="involved" style={{ textAlign: 'center', background: 'var(--primary-green)', color: 'white' }}>
         <h2 style={{ fontSize: '4rem' }}>BE PART OF THE CHANGE</h2>
         <p style={{ fontSize: '1.5rem', margin: 'var(--space-md) auto', maxWidth: '700px' }}>Whether you can volunteer your time, host a lawn sign, or make a donation, your support makes a difference.</p>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--space-sm)', marginTop: 'var(--space-md)' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--space-md)', marginTop: 'var(--space-md)', flexWrap: 'wrap' }}>
           <button 
             className="btn" 
-            style={{ background: 'white', color: 'var(--primary-red)' }}
+            style={{ background: 'white', color: 'var(--primary-green)', padding: '1rem 3rem' }}
             onClick={openJoinModal}
           >
             VOLUNTEER
           </button>
-          <button className="btn" style={{ background: '#ccc', color: 'white', cursor: 'not-allowed' }} disabled>DONATE NOW</button>
+          <button 
+            className="btn btn-gold" 
+            style={{ padding: '1rem 3rem' }}
+            onClick={openJoinModal}
+          >
+            DONATE NOW
+          </button>
         </div>
       </section>
     </main>

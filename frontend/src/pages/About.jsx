@@ -64,14 +64,27 @@ function About() {
           
           <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-lg)', alignItems: 'start' }}>
             <div>
-              <h3 style={{ color: 'var(--primary-red)', marginBottom: '1.5rem', fontSize: '1.8rem' }}>A Family Foundation</h3>
-              <p>My wife works at CIBC, and together we built our life here. Our daughters are pursuing their dreams in university—one at Waterloo, another in Life Sciences. I also care for my 90-year-old mother.</p>
-              <p>Every morning I wake up knowing what really matters: family, health, dignity, and community. When people ask why I am running, the answer is simple: for them.</p>
+              <h3 style={{ color: 'var(--primary-green)', marginBottom: '1.5rem', fontSize: '1.8rem' }}>A Proud Resident</h3>
+              <p>
+                I am a proud resident of Caledon with deep roots in the community. Having lived in Canada 
+                for over 20 years and right on the border of Brampton and Caledon for the past 20 years, 
+                I understand the unique challenges and opportunities our town faces.
+              </p>
+              <p>
+                As a local real estate professional and dedicated community volunteer, I have spent years 
+                listening to residents and working to make our community better.
+              </p>
             </div>
             <div>
-              <h3 style={{ color: 'var(--primary-red)', marginBottom: '1.5rem', fontSize: '1.8rem' }}>Service is Identity</h3>
-              <p>As President of IOC Canada, I am committed to unity and serving our diverse community. I’ve sat in Gurdwaras, walked the Credit River trails, and shared coffee with seniors who feel forgotten.</p>
-              <p>I didn’t start doing these things to run for Mayor. I’ve been here as a neighbor, and I’m asking to continue that service with more responsibility.</p>
+              <h3 style={{ color: 'var(--primary-green)', marginBottom: '1.5rem', fontSize: '1.8rem' }}>Service is Identity</h3>
+              <p>
+                As President of the Indian Overseas Congress Canada, I’ve fought for fairness and representation. 
+                I’ve sat in Gurdwaras, walked the Credit River trails, and shared coffee with seniors who feel forgotten.
+              </p>
+              <p>
+                Now I’m bringing that same passion and fresh perspective to lead Caledon as your Mayor. 
+                I am asking for your trust to continue that service with more responsibility.
+              </p>
             </div>
           </div>
         </div>
@@ -85,13 +98,13 @@ function About() {
             Our community is at a crossroads. From healthcare gaps to road safety, the challenges are real. 
             I am not a career politician—I am your neighbor. A fresh face with rural roots.
           </p>
-          <div style={{ fontWeight: 'bold', fontSize: '2rem', color: 'var(--primary-red)', marginBottom: '2rem' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '2rem', color: 'var(--primary-green)', marginBottom: '2rem' }}>
             I am here for your trust.
           </div>
           <div className="flex-center" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
             <button 
               className="btn btn-primary" 
-              style={{ background: 'var(--primary-red)' }}
+              style={{ background: 'var(--primary-green)' }}
               onClick={openJoinModal}
             >
               Join the Campaign

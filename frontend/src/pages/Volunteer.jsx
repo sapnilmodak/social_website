@@ -5,14 +5,12 @@ function Volunteer() {
   const { openJoinModal } = useModal();
   return (
     <main className="volunteer-page">
-      <section className="hero-internal" style={{ background: 'var(--primary-navy)', color: 'white' }}>
+      <section className="hero-internal" style={{ background: 'var(--primary-green)', color: 'white' }}>
         <div className="hero-content">
-          <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'white' }}>
-            This Campaign Lives in Your Streets
-          </h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>Get Involved</h1>
           <p style={{ fontSize: '1.25rem', opacity: 0.9, maxWidth: '800px', margin: '0 auto' }}>
-            I started at Best Buy. I went door to door at RBC. I knocked on doors as a realtor. 
-            Now I need you to knock with me.
+            Join the movement. Volunteer for door knocking, make a donation, or host a sign on your lawn. 
+            Together we can bring real change to Caledon.
           </p>
         </div>
       </section>
@@ -57,7 +55,7 @@ function Volunteer() {
           <div className="text-center" style={{ marginTop: '4rem' }}>
             <button 
               className="btn btn-primary" 
-              style={{ padding: '1.2rem 3.5rem', fontSize: '1.1rem', background: 'var(--primary-red)' }}
+              style={{ padding: '1.2rem 3.5rem', fontSize: '1.1rem', background: 'var(--primary-green)' }}
               onClick={openJoinModal}
             >
               Sign Me Up to Volunteer

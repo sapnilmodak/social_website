@@ -49,7 +49,7 @@ function Blogs() {
                     />
                   </div>
                   <div style={{ padding: 'var(--space-md)' }}>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--primary-red)', fontWeight: '700' }}>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--primary-green)', fontWeight: '700' }}>
                       {new Date(blog.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                     </span>
                     <h3 style={{ fontSize: '1.5rem', color: 'var(--primary-navy)', marginTop: '0.5rem', marginBottom: '1rem' }}>{blog.title}</h3>

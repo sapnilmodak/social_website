@@ -6,18 +6,28 @@ function Platform() {
   const commitments = [
     {
       id: 1,
-      title: "Vision for Caledon",
-      description: "Preserving our unique rural charm while ensuring development is resident-led and transparent. Our character is our strength, and putting families first is our priority.",
+      title: "Protecting Rural Caledon",
+      description: "Stop uncontrolled development. Preserve our farms and green spaces. We must preserve our rural character for future generations.",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
+          <path d="M3 21h18" /><path d="M5 21V7l7-4 7 4v14" /><path d="M9 21v-6h6v6" />
         </svg>
       )
     },
     {
       id: 2,
-      title: "Roads and Safety",
-      description: "Reliable infrastructure is a right, not a luxury. We will prioritize fixing potholes, improving road maintenance, and implementing safety measures to protect all road users.",
+      title: "Lower Taxes & Fiscal Responsibility",
+      description: "Fight against tax increases. Make sure growth actually pays for itself instead of burdening existing residents.",
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </svg>
+      )
+    },
+    {
+      id: 3,
+      title: "Safer Roads",
+      description: "Fix dangerous intersections and make our streets safe for children. We need better infrastructure that works for residents, not just through-traffic.",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -25,40 +35,9 @@ function Platform() {
       )
     },
     {
-      id: 3,
-      title: "Stronger By-Law Enforcement",
-      description: "A clean and peaceful community starts with accountability. We will strengthen by-law enforcement to maintain property standards, manage noise levels, and ensure neighbourhoods remain beautiful.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-        </svg>
-      )
-    },
-    {
       id: 4,
-      title: "Protecting Swan Lake",
-      description: "Environmental preservation is non-negotiable. We will fight to protect Swan Lake from being used as a dump site, ensuring its rehabilitation is respected for future generations.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-          <path d="M12 6v6l4 2" />
-        </svg>
-      )
-    },
-    {
-      id: 5,
-      title: "Safeguarding Farmland & Water",
-      description: "Our natural resources are precious. We are committed to protecting prime agricultural land, securing our water sources, and preserving the environmental integrity of our region.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-        </svg>
-      )
-    },
-    {
-      id: 6,
-      title: "Community Livability",
-      description: "Building a safer, more vibrant community for everyone. From enhanced public safety to better local facilities, we will focus on improving the quality of life for every resident.",
+      title: "Supporting Seniors",
+      description: "Better programs and services for our aging population. Every senior in Caledon deserves to age with dignity and access to local care.",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
@@ -66,12 +45,22 @@ function Platform() {
       )
     },
     {
-      id: 7,
-      title: "My Background",
-      description: "Driven by a lifetime of service and deep roots in the community. Learn why Jagdeep is running and the professional experience and dedication he brings to the job.",
+      id: 5,
+      title: "Healthcare Access",
+      description: "Push for more local healthcare services. The land is donated, the need is urgent — we need a hospital and faster emergency response.",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+      )
+    },
+    {
+      id: 6,
+      title: "Transparency",
+      description: "Open government. No more backroom deals. Every decision will be made in the open with full input from the people.",
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
         </svg>
       )
     }
@@ -79,13 +68,11 @@ function Platform() {
 
   return (
     <main className="platform-page">
-      <section className="hero-internal" style={{ background: 'linear-gradient(rgba(223, 46, 31, 0.9), rgba(223, 46, 31, 1))' }}>
+      <section className="hero-internal" style={{ background: 'var(--primary-green)', color: 'white' }}>
         <div className="hero-content">
-          <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'white' }}>
-            Seven Commitments. No Fine Print.
-          </h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>Key Issues</h1>
           <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', maxWidth: '800px', margin: '0 auto' }}>
-            These are not promises made at election time. These are commitments built from years of listening to you.
+            Caledon is at a crossroads. We need a leader who puts residents ahead of developers.
           </p>
         </div>
       </section>
@@ -118,7 +105,7 @@ function Platform() {
               <h2>A Contract with the Community</h2>
               <p>
                 Politics often feels like a series of backroom deals and broken promises. I am running to change that. 
-                These seven pillars are the foundation of my administration.
+                These six pillars are the foundation of my administration.
               </p>
               <p>
                 If elected, my office will be one of transparency. You won't have to guess where I stand 

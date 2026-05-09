@@ -98,7 +98,7 @@ function JoinModal({ isOpen, onClose, showNotification }) {
             className="btn btn-primary btn-submit"
             disabled={loading}
             style={{ 
-              background: 'var(--primary-red)', 
+              background: 'var(--primary-green)', 
               color: 'white', 
               width: '100%', 
               marginTop: '1.5rem',
