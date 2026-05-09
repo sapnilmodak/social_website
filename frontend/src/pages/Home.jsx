@@ -158,7 +158,7 @@ function Home() {
               key={photo.id} 
               className={`community-slide ${index === currentSlide ? 'active' : ''}`}
             >
-              <img src={photo.url.startsWith('/') ? photo.url : `${BACKEND_URL}${photo.url}`} alt={photo.caption} />
+              <img src={photo.url.startsWith('/uploads') ? `${BACKEND_URL}${photo.url}` : photo.url} alt={photo.caption} />
               {photo.caption && (
                 <div className="community-slide-caption">
                   <h3>{photo.caption}</h3>
