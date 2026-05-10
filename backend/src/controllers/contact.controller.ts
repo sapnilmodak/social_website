@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
+import { sendContactEmail } from '../config/mail';
 
 const prisma = new PrismaClient();
 
@@ -19,6 +20,9 @@ export const submitMessage = async (req: Request, res: Response) => {
         message
       }
     });
+
+    // Send email notification and confirmation
+    await sendContactEmail(firstName, lastName, email, message);
 
     res.status(201).json({ message: "Message sent successfully", data: newMessage });
   } catch (error) {

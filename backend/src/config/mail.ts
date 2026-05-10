@@ -73,3 +73,60 @@ export const sendWelcomeEmail = async (to: string, name: string) => {
     console.error('Error sending welcome email:', error);
   }
 };
+export const sendContactEmail = async (firstName: string, lastName: string, email: string, message: string) => {
+  // 1. Notification to the Campaign Team
+  const adminMailOptions = {
+    from: `"Campaign Website" <${process.env.SMTP_USER}>`,
+    to: process.env.SMTP_USER, // Send to the official campaign email
+    replyTo: email,
+    subject: `New Message from ${firstName} ${lastName}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-top: 5px solid #1B4332;">
+        <h2 style="color: #1B4332;">New Supporter Message</h2>
+        <p><strong>From:</strong> ${firstName} ${lastName} (${email})</p>
+        <p><strong>Message:</strong></p>
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; color: #333;">
+          ${message}
+        </div>
+        <p style="margin-top: 20px;">
+          <a href="mailto:${email}" style="background: #1B4332; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Reply to ${firstName}
+          </a>
+        </p>
+      </div>
+    `,
+  };
+
+  // 2. Confirmation to the Supporter
+  const userMailOptions = {
+    from: `"Jagdeep Sacha for Mayor" <${process.env.SMTP_USER}>`,
+    to: email,
+    subject: 'We Received Your Message - Jagdeep Sacha Campaign',
+    html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-top: 5px solid #1B4332;">
+        <h2 style="color: #1B4332;">Hello ${firstName},</h2>
+        <p>Thank you for reaching out to the Jagdeep Sacha Campaign for Mayor.</p>
+        <p>We have received your message and our team will get back to you as soon as possible.</p>
+        <p>Your interest and support are vital as we work together to build a stronger Caledon.</p>
+        <hr />
+        <p><strong>Your Message:</strong></p>
+        <div style="font-style: italic; color: #666; margin-bottom: 20px;">
+          "${message}"
+        </div>
+        <p>Best regards,</p>
+        <p><strong>Jagdeep Sacha & The Campaign Team</strong></p>
+      </div>
+    `,
+  };
+
+  try {
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(adminMailOptions),
+      transporter.sendMail(userMailOptions)
+    ]);
+    console.log(`Contact emails sent for ${email}`);
+  } catch (error) {
+    console.error('Error sending contact emails:', error);
+  }
+};
