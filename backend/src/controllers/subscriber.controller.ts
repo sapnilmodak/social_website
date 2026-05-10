@@ -22,8 +22,8 @@ export const subscribe = async (req: Request, res: Response) => {
       },
     });
 
-    // Send Welcome Email
-    await sendWelcomeEmail(email, firstName);
+    // Send Welcome Email (Non-blocking to prevent timeouts)
+    sendWelcomeEmail(email, firstName).catch(err => console.error('Background Email Error:', err));
 
     res.status(201).json({ message: 'Successfully joined the movement!', subscriber });
   } catch (error) {

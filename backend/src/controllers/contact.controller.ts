@@ -21,8 +21,8 @@ export const submitMessage = async (req: Request, res: Response) => {
       }
     });
 
-    // Send email notification and confirmation
-    await sendContactEmail(firstName, lastName, email, message);
+    // Send email notification and confirmation (Non-blocking)
+    sendContactEmail(firstName, lastName, email, message).catch(err => console.error('Background Contact Email Error:', err));
 
     res.status(201).json({ message: "Message sent successfully", data: newMessage });
   } catch (error) {
