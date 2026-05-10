@@ -97,8 +97,6 @@ function Home() {
             Protecting our rural roots from the same old insiders. I’m putting residents first — not developers.
           </p>
           <div className="hero-actions" style={{ marginTop: '2.5rem' }}>
-            <button className="btn btn-gold" onClick={openJoinModal} style={{ padding: '1.2rem 3rem', fontSize: '1.2rem' }}>DONATE NOW</button>
-            <button className="btn" onClick={openJoinModal} style={{ background: 'white', color: 'var(--primary-green)', padding: '1.2rem 3rem', fontSize: '1.2rem' }}>VOLUNTEER</button>
             <button className="btn btn-outline" onClick={openJoinModal} style={{ borderColor: 'white', color: 'white', padding: '1.2rem 3rem', fontSize: '1.2rem' }}>JOIN OUR TEAM</button>
           </div>
         </div>
@@ -227,21 +225,14 @@ function Home() {
 
       <section className="section involved" id="involved" style={{ textAlign: 'center', background: 'var(--primary-green)', color: 'white' }}>
         <h2 style={{ fontSize: '4rem' }}>BE PART OF THE CHANGE</h2>
-        <p style={{ fontSize: '1.5rem', margin: 'var(--space-md) auto', maxWidth: '700px' }}>Whether you can volunteer your time, host a lawn sign, or make a donation, your support makes a difference.</p>
+        <p style={{ fontSize: '1.5rem', margin: 'var(--space-md) auto', maxWidth: '700px' }}>Whether you can volunteer your time or host a lawn sign, your support makes a difference.</p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--space-md)', marginTop: 'var(--space-md)', flexWrap: 'wrap' }}>
-          <button 
-            className="btn" 
-            style={{ background: 'white', color: 'var(--primary-green)', padding: '1rem 3rem' }}
-            onClick={openJoinModal}
-          >
-            VOLUNTEER
-          </button>
           <button 
             className="btn btn-gold" 
             style={{ padding: '1rem 3rem' }}
             onClick={openJoinModal}
           >
-            DONATE NOW
+            JOIN OUR TEAM
           </button>
         </div>
       </section>

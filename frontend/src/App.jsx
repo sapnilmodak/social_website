@@ -127,7 +127,6 @@ function App() {
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/donate" element={<Donate />} />
           </Routes>
         </Layout>
       </Router>
