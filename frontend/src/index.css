@@ -7,7 +7,7 @@
   --bg-offwhite: #F8F9FA;
   --text-dark: #121212;
   --text-light: #F8F9FA;
-  --accent-gold: #D4AF37;
+  --accent-gold: #F5B700;
   
   /* Typography */
   --font-main: 'Outfit', sans-serif;
@@ -149,13 +149,15 @@ h1, h2, h3, h4 {
 
 .btn-gold {
   background: var(--accent-gold);
-  color: white;
+  color: var(--primary-navy);
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(245, 183, 0, 0.2);
 }
 
 .btn-gold:hover {
-  background: #b8962d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  background: #e0a800;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(245, 183, 0, 0.4);
 }
 
 /* Menu Toggle */

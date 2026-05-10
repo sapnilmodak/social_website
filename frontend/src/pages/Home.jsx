@@ -83,20 +83,62 @@ function Home() {
       <main>
       <section className="hero" style={{ background: 'linear-gradient(rgba(10, 25, 10, 0.7), rgba(10, 25, 10, 0.8)), url("/jsgreen.jpeg") center/cover' }}>
         <div className="hero-content">
-          <span className="hero-subtitle" style={{ color: 'var(--accent-gold)' }}>FOR MAYOR OF CALEDON</span>
-          <h1 className="hero-title" style={{ color: 'white' }}>Jagdeep Sacha<br />for Mayor</h1>
-          <p className="hero-tagline" style={{ color: 'var(--accent-gold)', fontSize: '1.2rem' }}>
-            Son of a Farmer · Fresh Eyes. Honest Leadership. Protecting Our Rural Roots.
-          </p>
-          <p className="hero-description" style={{ color: 'white', maxWidth: '700px' }}>
-            Caledon deserves better than the same old insiders. I’m running for Mayor because it’s time for 
-            real transparency, controlled growth that respects our farmland, safer roads, and putting 
-            residents first — not developers.
-          </p>
-          <div className="hero-actions">
-            <button className="btn btn-gold" onClick={openJoinModal}>DONATE NOW</button>
-            <button className="btn btn-outline" onClick={openJoinModal} style={{ borderColor: 'white', color: 'white' }}>VOLUNTEER</button>
+          <span className="hero-subtitle" style={{ color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>FOR MAYOR OF CALEDON</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <span style={{ color: 'white', background: 'var(--primary-green)', padding: '0.3rem 0.8rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid var(--accent-gold)' }}>
+              ELECTION DAY: OCTOBER 26, 2026
+            </span>
           </div>
+          <h1 className="hero-title" style={{ color: 'white', fontSize: 'clamp(3rem, 10vw, 7rem)', lineHeight: '0.9' }}>Jagdeep Sacha<br />for Mayor</h1>
+          <p className="hero-tagline" style={{ color: 'var(--accent-gold)', fontSize: '1.4rem', fontWeight: '700', marginTop: '1rem' }}>
+            Son of a Farmer · Fresh Leadership for Caledon.
+          </p>
+          <p className="hero-description" style={{ color: 'white', maxWidth: '700px', fontSize: '1.2rem', marginTop: '1rem' }}>
+            Protecting our rural roots from the same old insiders. I’m putting residents first — not developers.
+          </p>
+          <div className="hero-actions" style={{ marginTop: '2.5rem' }}>
+            <button className="btn btn-gold" onClick={openJoinModal} style={{ padding: '1.2rem 3rem', fontSize: '1.2rem' }}>DONATE NOW</button>
+            <button className="btn" onClick={openJoinModal} style={{ background: 'white', color: 'var(--primary-green)', padding: '1.2rem 3rem', fontSize: '1.2rem' }}>VOLUNTEER</button>
+            <button className="btn btn-outline" onClick={openJoinModal} style={{ borderColor: 'white', color: 'white', padding: '1.2rem 3rem', fontSize: '1.2rem' }}>JOIN OUR TEAM</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section platform" id="issues" style={{ paddingBottom: '0' }}>
+        <div className="section-header">
+          <span className="section-subtitle">The Plan for Caledon</span>
+          <h2 className="section-title">KEY ISSUES</h2>
+        </div>
+        
+        <div className="platform-accordion">
+          <PlatformItem 
+            title="PROTECTING RURAL CALEDON" 
+            content="Stop uncontrolled development. Preserve our farms and green spaces. We must preserve our rural character for future generations."
+            id="rural"
+          />
+          <PlatformItem 
+            title="LOWER TAXES & FISCAL RESPONSIBILITY" 
+            content="Fight against tax increases. Make sure growth actually pays for itself instead of burdening existing residents."
+            id="taxes"
+          />
+          <PlatformItem 
+            title="SAFER ROADS" 
+            content="Fix dangerous intersections and make our streets safe for children. We need better infrastructure that works for residents."
+            id="roads"
+          />
+          <PlatformItem 
+            title="SUPPORTING SENIORS" 
+            content="Better programs and services for our aging population. Every senior in Caledon deserves to age with dignity."
+            id="seniors"
+          />
+          <PlatformItem 
+            title="TRANSPARENCY & ACCOUNTABILITY" 
+            content="A city belongs to its people. Jagdeep will ensure that community decisions are made in the open, with real public consultation. We will prioritize transparency in municipal spending and ensure every voice in Caledon is heard before major projects move forward."
+            id="transparency"
+          />
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <Link to="/platform" className="btn btn-outline">VIEW ALL ISSUES</Link>
         </div>
       </section>
 
@@ -147,43 +189,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="section platform" id="issues">
-        <div className="section-header">
-          <span className="section-subtitle">The Plan for Caledon</span>
-          <h2 className="section-title">KEY ISSUES</h2>
-        </div>
-        
-        <div className="platform-accordion">
-          <PlatformItem 
-            title="PROTECTING RURAL CALEDON" 
-            content="Stop uncontrolled development. Preserve our farms and green spaces. We must preserve our rural character for future generations."
-            id="rural"
-          />
-          <PlatformItem 
-            title="LOWER TAXES & FISCAL RESPONSIBILITY" 
-            content="Fight against tax increases. Make sure growth actually pays for itself instead of burdening existing residents."
-            id="taxes"
-          />
-          <PlatformItem 
-            title="SAFER ROADS" 
-            content="Fix dangerous intersections and make our streets safe for children. We need better infrastructure that works for residents."
-            id="roads"
-          />
-          <PlatformItem 
-            title="SUPPORTING SENIORS" 
-            content="Better programs and services for our aging population. Every senior in Caledon deserves to age with dignity."
-            id="seniors"
-          />
-          <PlatformItem 
-            title="TRANSPARENCY & ACCOUNTABILITY" 
-            content="A city belongs to its people. Jagdeep will ensure that community decisions are made in the open, with real public consultation. We will prioritize transparency in municipal spending and ensure every voice in Caledon is heard before major projects move forward."
-            id="transparency"
-          />
-        </div>
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <Link to="/platform" className="btn btn-outline">VIEW ALL ISSUES</Link>
-        </div>
-      </section>
+
 
       <section className="section community" id="community" style={{ background: 'var(--bg-offwhite)' }}>
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
