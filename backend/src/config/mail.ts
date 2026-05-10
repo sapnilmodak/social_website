@@ -12,12 +12,9 @@ export const transporter = nodemailer.createTransport({
     pass: process.env.SMTP_PASS,
   },
   tls: {
-    rejectUnauthorized: false,
-    minVersion: 'TLSv1.2',
-    ciphers: 'SSLv3' // Force older cipher if needed
+    rejectUnauthorized: false
   },
-  // Force PLAIN if LOGIN is failing, or vice versa
-  authMethod: 'PLAIN', 
+  authMethod: 'LOGIN',
   debug: true,
   logger: true
 });
