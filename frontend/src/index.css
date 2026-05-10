@@ -67,19 +67,20 @@ h1, h2, h3, h4 {
   top: 0;
   z-index: 1000;
   background: var(--bg-white);
-  padding: 1.2rem var(--space-lg);
+  padding: 0.8rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: var(--primary-navy);
   text-decoration: none;
   letter-spacing: -0.5px;
+  flex-shrink: 0;
 }
 
 .logo span {
@@ -88,15 +89,19 @@ h1, h2, h3, h4 {
 
 .nav {
   display: flex;
-  gap: var(--space-md);
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0 2rem;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--primary-navy);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   transition: var(--transition-smooth);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .nav-link:hover {

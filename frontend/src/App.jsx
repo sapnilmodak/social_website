@@ -62,27 +62,12 @@ function Layout({ children }) {
           <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>ABOUT ME</Link>
           <Link to="/vision" className="nav-link" onClick={() => setMenuOpen(false)}>MY VISION</Link>
           <Link to="/platform" className="nav-link" onClick={() => setMenuOpen(false)}>ISSUES</Link>
-          <Link to="/volunteer" className="nav-link" onClick={() => setMenuOpen(false)}>GET INVOLVED</Link>
           <Link to="/blogs" className="nav-link" onClick={() => setMenuOpen(false)}>BLOGS</Link>
           <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>CONTACT</Link>
-          <button 
-            className="nav-link" 
-            onClick={() => { openJoinModal(); setMenuOpen(false); }}
-            style={{ background: 'none', border: 'none', textAlign: 'left', padding: 0, cursor: 'pointer' }}
-          >
-            VOLUNTEER
-          </button>
-          <button 
-            className="nav-link mobile-only" 
-            onClick={() => { openJoinModal(); setMenuOpen(false); }}
-            style={{ background: 'none', border: 'none', textAlign: 'left', padding: 0, cursor: 'pointer' }}
-          >
-            JOIN ME
-          </button>
         </nav>
 
         <div className="header-actions desktop-only">
-          <button className="btn btn-primary" onClick={openJoinModal}>JOIN ME</button>
+          <button className="btn btn-gold" onClick={openJoinModal}>JOIN ME</button>
         </div>
       </header>
 
