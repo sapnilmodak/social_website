@@ -78,7 +78,7 @@ function About() {
             <div>
               <h3 style={{ color: 'var(--primary-green)', marginBottom: '1.5rem', fontSize: '1.8rem' }}>Service is Identity</h3>
               <p>
-                As President of the Indian Overseas Congress Canada, I’ve fought for fairness and representation. 
+                As President of the IOC Canada, I’ve fought for fairness and representation. 
                 I’ve sat in Gurdwaras, walked the Credit River trails, and shared coffee with seniors who feel forgotten.
               </p>
               <p>
