@@ -46,7 +46,7 @@ export const deleteMessage = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     await prisma.contactMessage.delete({
-      where: { id }
+      where: { id: String(id) }
     });
     res.status(200).json({ message: "Message deleted successfully" });
   } catch (error) {
