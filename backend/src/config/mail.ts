@@ -4,27 +4,21 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.titan.email',
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
   port: parseInt(process.env.SMTP_PORT || '465'),
-  secure: true, 
+  secure: process.env.SMTP_SECURE === 'true' || true,
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
-  tls: {
-    rejectUnauthorized: false
-  },
-  authMethod: 'LOGIN',
-  debug: true,
-  logger: true
 });
 
 // Verify connection on startup
 transporter.verify((error, success) => {
   if (error) {
-    console.error('SMTP Verification Error:', error);
+    console.error('Gmail SMTP Verification Error:', error);
   } else {
-    console.log('SMTP Server is ready to take our messages');
+    console.log('Gmail SMTP Server is ready');
   }
 });
 
