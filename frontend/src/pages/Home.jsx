@@ -175,9 +175,10 @@ function Home() {
           <span className="section-subtitle">A Candidate with Heart</span>
           <h2>MEET JAGDEEP SACHA</h2>
           <p>
-            Born and raised with deep roots in the Caledon community, Jagdeep Sacha has spent years 
-            listening to residents and working to make our community better. As a local real estate 
-            professional and dedicated community volunteer, he understands the unique challenges we face.
+            Jagdeep Sacha chose Caledon for its breathtaking nature and rural beauty. Since making Caledon 
+            his home, he has spent years listening to residents and working to make our community better. 
+            As a local real estate professional and dedicated community volunteer, he understands the 
+            unique challenges we face.
           </p>
           <p>
             Now, he is bringing his passion and fresh perspective to lead Caledon as your Mayor. 

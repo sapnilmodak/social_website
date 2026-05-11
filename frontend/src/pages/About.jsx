@@ -66,9 +66,9 @@ function About() {
             <div>
               <h3 style={{ color: 'var(--primary-green)', marginBottom: '1.5rem', fontSize: '1.8rem' }}>A Proud Resident</h3>
               <p>
-                I am a proud resident of Caledon with deep roots in the community. Having lived in Canada 
-                for over 20 years and right on the border of Brampton and Caledon for the past 20 years, 
-                I understand the unique challenges and opportunities our town faces.
+                I am a proud resident of Caledon who chose this community for its breathtaking nature and 
+                rural beauty. Having lived in Canada for over 20 years and right on the border of Brampton 
+                and Caledon for the past 20 years, I understand the unique challenges and opportunities our town faces.
               </p>
               <p>
                 As a local real estate professional and dedicated community volunteer, I have spent years 
@@ -95,8 +95,7 @@ function About() {
         <div className="container">
           <h2 style={{ color: 'white', fontSize: '3rem', marginBottom: '2rem' }}>If Not Now, When?</h2>
           <p style={{ fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto 3rem', opacity: 0.9 }}>
-            Our community is at a crossroads. From healthcare gaps to road safety, the challenges are real. 
-            I am not a career politician—I am your neighbor. A fresh face with rural roots.
+            I am not a career politician—I am your neighbor. A fresh face with a passion for our rural character.
           </p>
           <div style={{ fontWeight: 'bold', fontSize: '2rem', color: 'var(--primary-green)', marginBottom: '2rem' }}>
             I am here for your trust.
